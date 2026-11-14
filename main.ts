@@ -3,7 +3,8 @@
 // of seared salmon with golden crispy skin, asparagus, glossy citrus butter
 // sauce, micro herbs and edible pansies, steam rising in warm window light.
 // The program copies it to /output/entry.png (or $MAKEFUN_OUTPUT_DIR).
-// Deterministic, no network: it writes the same bytes on every run.
+// Deterministic, no network: it writes the same bytes on every run, and
+// it refuses to run when the image is missing instead of writing nothing.
 
 import { copyFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
